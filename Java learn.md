@@ -50,3 +50,21 @@ public class Main {
     }
 }
 ```
+<p>While loop combined with an if else statement, let's say we play game of Yatzy:</p>
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+        int dice = 1;
+
+        while (dice <= 6) {
+            if (dice < 6) {
+                System.out.println("No Yatzy.");
+            } else {
+                System.out.println("Yatzy!");
+            }
+            dice = dice + 1;
+        }
+    }
+}
+```
