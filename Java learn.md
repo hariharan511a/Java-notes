@@ -147,3 +147,39 @@ Google products Apps most use android
 Index: 10 messages unread!
 All methods excuted!..
 ```
+### Java method parameters
+<p>Parameters and arguments</p>
+<p>Java return methods</p>
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+        Main t1 = new Main();
+        Main.gmail_method();
+        t1.product_method();
+        String google = t1.product_method();
+        System.out.println(google);
+        Main.windows_method("11.4.201.001");
+        
+        String student = t1.college_method(2024);
+        System.out.println("I am Hariharan " + student + " completed.");
+    }
+
+    static void gmail_method() {
+        System.out.println("Index: 10 messages unread!");   // no return, no arguments
+    }
+    
+    String product_method() {
+        return "Google products Apps most use android";   // with return, no arguments   
+    }
+
+    static void windows_method(String a) {
+        System.out.println("Windows 11 update " + a + " Installing");   // no return, with arguments
+    }
+
+    String college_method(int a) {
+        String b = "recent graduates in " + a;   // with return, with arguments
+        return b;   // added return statement
+    }
+}
+```
