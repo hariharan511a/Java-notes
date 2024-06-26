@@ -192,3 +192,47 @@ Windows 11 update 11.4.201.001 Installing
 I am Hariharan recent graduates in 2024 completed.
 All methods excuted!..
 ```
+### Java method overloading
+<p>Two methods, add numbers different type:</p>
+
+```Java
+public class Main {
+    static int plus_method(int a, int b) {
+        return a + b;
+    }
+
+    static double double_method(double a, double b) {
+        return a + b;
+    }
+    public static void main(String[] args) {  
+        int t1 = Main.plus_method(5, 10 );
+        System.out.println("Int value: " + t1);
+
+        double t2 = Main.double_method(4.5d, 10.5d);
+        System.out.println("Double value: " + t2);
+       
+    }
+}
+```
+<p>methods overloading ( Multiple methods, same name with different parameters )</p>
+
+```Java
+public class Main {
+    static int plus_method(int a, int b) {
+        return a + b;
+    }
+
+    static double plus_method(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {    // methods overloading
+        int t1 = Main.plus_method(5, 10 );
+        System.out.println("Int value: " + t1);
+
+        double t2 = Main.plus_method(4.5d, 10.5d);
+        System.out.println("Double value: " + t2);
+       
+    }
+}
+```
