@@ -163,6 +163,7 @@ public class Main {
         
         String student = t1.college_method(2024);
         System.out.println("I am Hariharan " + student + " completed.");
+        System.out.println("All methods excuted!..");
     }
 
     static void gmail_method() {
@@ -182,4 +183,12 @@ public class Main {
         return b;   // added return statement
     }
 }
+```
+### Output
+```
+Index: 10 messages unread!
+Google products Apps most use android
+Windows 11 update 11.4.201.001 Installing
+I am Hariharan recent graduates in 2024 completed.
+All methods excuted!..
 ```
