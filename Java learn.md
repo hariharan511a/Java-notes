@@ -100,3 +100,50 @@ public class Main {
     }
 }
 ```
+### Java methods
+```Java
+public class Main {
+    public static void main(String[] args) {
+        Main t1 = new Main();
+        Main.gmail_method();
+        System.out.println("All methods excuted!..");
+    }
+
+    static void gmail_method() {
+        Main t1 = new Main();
+        t1.product_method();
+        System.out.println("Index: 10 messages unread!");   // static to non static
+    }
+
+    void product_method() {
+        Main t1 = new Main();
+        t1.windows_method();
+        System.out.println("Google products Apps most use android");    // non static to non static
+    }
+
+    void windows_method() {
+        Main.spotify_method();
+        System.out.println("Windows 11 update 11.4.201.001 installing");    // non static to static
+    }
+
+    static void spotify_method() {
+        Main.college_method();
+        System.out.println("Play On High On Love Song");    // static to static
+    }
+
+    static void college_method() {
+        int a = 2024;
+        String b = "recent graduates in ";
+        System.out.println("I am Hariharan " + b + a + " completed."); 
+    }
+}
+```
+### Output
+```
+I am Hariharan recent graduates in 2024 completed.
+Play On High On Love Song
+Windows 11 update 11.4.201.001 installing
+Google products Apps most use android
+Index: 10 messages unread!
+All methods excuted!..
+```
