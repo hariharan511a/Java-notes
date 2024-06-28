@@ -236,3 +236,30 @@ public class Main {
     }
 }
 ```
+### Static vs public
+```Java
+public class Second {
+    // static method
+    static void windows_method() {
+        System.out.println("Windows 11 update 11.401.415");             
+    }
+
+    // non static method
+    void gmail_method() {
+        System.out.println("Index 10 messages unread!.");           
+    }
+
+    // public method
+    public void product_method() {
+        System.out.println("Google product Apps most use android");
+    }
+
+    public static void main(String[] args) {  
+        Second.windows_method();                // call static method
+        Second alt = new Second();
+        alt.gmail_method();                     // call non static method
+        alt.product_method();                   // call public method
+
+    }
+}
+```
