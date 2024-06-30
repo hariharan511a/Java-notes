@@ -263,3 +263,101 @@ public class Second {
     }
 }
 ```
+### Java Inheritance type
+<ol>
+    <li>Single Inheritance</li>
+    <li>Multilevel Inheritance</li>
+    <li>Hierarchical Inheritance</li>
+    <li>Multiple Inheritance</li>
+    <li>Hybrid Inheritance</li>
+</ol>
+
+### Single Inheritance
+
+```Java
+class One {
+    public void gmail_method() {
+        System.out.println("Index: 10 messages unread!");
+    }
+}
+
+class Two extends One {
+    public void product_method() {
+        System.out.println("Gooogle products Apps most use android");
+    }
+
+    public static void main(String[] args) {
+        Two t1 = new Two();
+        t1.gmail_method();  // call parent class => One
+        t1.product_method(); // call child class => Two
+    }
+}
+```
+### Multilevel Inheritance
+
+```Java
+class One {
+    public void gmail_method() {
+        System.out.println("Index: 10 messages unread!");
+    }
+}
+
+class Two extends One {
+    public void product_method() { 
+        System.out.println("Gooogle products Apps most use android");
+    }
+}
+
+class Three extends Two {
+    public void windows_method() {
+        System.out.println("Windows 11 update 11.401.415");
+    }
+}
+    public static void main(String[] args) {
+        Three t1 = new Three();
+        t1.gmail_method();  // call One class => access attributes, method
+        t1.product_method(); // call Two class => access attributes, method
+        t1.windows_method(); // call Three class
+    }
+```
+### Hierarchical Inheritance
+
+```Java
+class A {
+    public void print_A() {
+        System.out.println("class A");
+    }
+}
+
+class B extends A {
+    public void print_B() {
+        System.out.println("class B");
+    }
+}
+
+class C extends B {
+    public void print_C() {
+        System.out.println("class C");
+    }
+}
+
+class D extends C {
+    public void print_D() {
+        System.out.println("class D");
+    }
+    public static void main(String[] args) {
+        D t1 = new D();
+        // t1 object => 1
+        t1.print_A();
+        t1.print_B();
+        t1.print_C();
+        t1.print_D();
+        C t2 = new C();
+        // t2 object => 2
+        t2.print_A();
+        t2.print_B();
+        t2.print_C();
+        t2.print_C();
+    }
+}
+```
