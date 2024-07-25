@@ -286,26 +286,31 @@ Class E
 </ol>
 
 ### Single Inheritance
-<p>One parent class, one child class</p>
+<p>One parent class and one child class</p>
 
 ```Java
 class One {
-    public void gmail_method() {
-        System.out.println("Index: 10 messages unread!");
+    public void print_A() {
+        System.out.println("Class A");
     }
 }
 
 class Two extends One {
-    public void product_method() {
-        System.out.println("Gooogle products Apps most use android");
+    public void print_B() {
+        System.out.println("Class B");
     }
 
     public static void main(String[] args) {
         Two t1 = new Two();
-        t1.gmail_method();  // call parent class => One
-        t1.product_method(); // call child class => Two
+        t1.print_A();  // call parent class => One
+        t1.print_B();  // call child class => Two
     }
 }
+```
+### Output
+```
+Class A
+Class B
 ```
 ### Multilevel Inheritance
 <p>One parent class and more than child class</p>
