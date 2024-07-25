@@ -238,31 +238,44 @@ public class Main {
 ```
 ### Static vs public
 ```Java
-public class Second {
-    // static method
-    static void windows_method() {
-        System.out.println("Windows 11 update 11.401.415");             
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+        Main.print_A();
     }
-
-    // non static method
-    void gmail_method() {
-        System.out.println("Index 10 messages unread!.");           
+    static void print_A() { // static to non static
+        System.out.println("Class A");
+        Main t1 = new Main();
+        t1.print_B();
     }
-
-    // public method
-    public void product_method() {
-        System.out.println("Google product Apps most use android");
+    public void print_B() { // non static to non static
+        System.out.println("Class B");
+        Main t2 = new Main();
+        t2.print_C();
     }
-
-    public static void main(String[] args) {  
-        Second.windows_method();                // call static method
-        Second alt = new Second();
-        alt.gmail_method();                     // call non static method
-        alt.product_method();                   // call public method
-
+    public void print_C() { // non static to static
+        System.out.println("Class C");
+        Main.print_D();
+    }
+    static void print_D() { // static to static
+        System.out.println("Class D");
+        Main.print_E();
+    }
+    static void print_E() {
+        System.out.println("Class E");
     }
 }
 ```
+### Output
+```
+Hello World
+Class A
+Class B
+Class C
+Class D
+Class E
+```
+
 ### Java Inheritance type
 <ol>
     <li>Single Inheritance</li>
