@@ -273,6 +273,7 @@ public class Second {
 </ol>
 
 ### Single Inheritance
+<p>One parent class, one child class</p>
 
 ```Java
 class One {
@@ -294,6 +295,7 @@ class Two extends One {
 }
 ```
 ### Multilevel Inheritance
+<p>One parent class and more than child class</p>
 
 ```Java
 class One {
@@ -321,43 +323,8 @@ class Three extends Two {
     }
 ```
 ### Hierarchical Inheritance
+<p>One child class and more than parent class</p>
 
 ```Java
-class A {
-    public void print_A() {
-        System.out.println("class A");
-    }
-}
 
-class B extends A {
-    public void print_B() {
-        System.out.println("class B");
-    }
-}
-
-class C extends B {
-    public void print_C() {
-        System.out.println("class C");
-    }
-}
-
-class D extends C {
-    public void print_D() {
-        System.out.println("class D");
-    }
-    public static void main(String[] args) {
-        D t1 = new D();
-        // t1 object => 1
-        t1.print_A();
-        t1.print_B();
-        t1.print_C();
-        t1.print_D();
-        C t2 = new C();
-        // t2 object => 2
-        t2.print_A();
-        t2.print_B();
-        t2.print_C();
-        t2.print_C();
-    }
-}
 ```
